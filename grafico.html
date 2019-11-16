@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gráfico - reta tangente</title>
+	<meta charset="utf-8">
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+</script>
+	<script type="text/javascript" src="codigo.js"></script>
+	<script type="text/javascript" src="Grafico.js"></script>
+	<link type="text/css" href="estilos.css" rel="stylesheet" />
+</head>
+<body onload="init();">
+<h3>Gráfico - reta tangente</h3>
+<canvas width="700" height="500" id="cvs"></canvas>
+<form>
+  <div>
+    Escala em     X:
+    <meter id="xEsc" min="1" max="100" value=""></meter>
+    <input type="text" id="vxEsc" size="3" value="" onblur="cInput('xEsc');" />
+
+    Escala em     Y:
+    <meter id="yEsc" min="1" max="100" value=""></meter>
+    <input type="text" id="vyEsc" size="3" value="" onblur="cInput('yEsc');" />
+  </div>
+  <br>
+  <div>
+    Distância      X:
+    <meter id="xMrc" min="1" max="50" value=""></meter>
+    <input type="text" id="vxMrc" size="3" value="" onblur="cInput('xMrc');" />
+
+    Distância      Y:
+    <meter id="yMrc" min="1" max="50" value=""></meter>
+    <input type="text" id="vyMrc" size="3" value="" onblur="cInput('yMrc');" />
+  </div>
+  <br>
+  <div>
+    Coordenada  X:
+    <meter id="xRef" min="0" max="400" value=""></meter>
+    <input type="text" id="vxRef" size="3" value="" onblur="cInput('xRef');" />
+
+    Coordenada  Y:
+    <meter id="yRef" min="0" max="300" value=""></meter>
+    <input type="text" id="vyRef" size="3" value="" onblur="cInput('yRef');" />
+  </div>
+  <br>
+  <div>
+    Função:
+            <input type="text" id="func" size="30" value="4*Math.log(x)" />
+  </div>
+  <br>
+  <div>
+     Valor de   X:
+    <input type="text" id="xtan" size="10" value="5" />
+
+    Valor de Dx:
+    <input type="text" id="xdelta" size="10" value="0.2" />
+  </div>
+  <br>
+  <input type="button" value="Calcular" onclick="redesenha();" />
+</form>
+</body>
+</html>
