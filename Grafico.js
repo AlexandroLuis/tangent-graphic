@@ -2,8 +2,8 @@
 function Grafico() {
 
 	// Coordenadas da origem do referencial visível
-	this.xr = 190;
-	this.yr = 170;
+	this.xr = 170;
+	this.yr = 300;
 	// Escalas dos eixos
 	this.xEscala = 4;
 	this.yEscala = 4;
@@ -95,7 +95,7 @@ function Grafico() {
 			x = i/this.xEscala;
 			y = f(x);
 			if(!isFinite(y)) continue;
-			this.poePonto(ptPreto, x, y);
+			this.poePonto(ptVermelho, x, y);
 		}
 
 		// Calcular o declive
@@ -109,7 +109,7 @@ function Grafico() {
 		var b = yt - m * xt;
 
 		// Desenhar tangente
-		for(var i=0; i<larg; i++) {
+		for(var i=-1000; i<larg; i++) {
 			x = i/this.xEscala;
 			y = m * x + b;
 			if(!isFinite(y)) continue;

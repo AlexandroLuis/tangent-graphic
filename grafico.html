@@ -11,8 +11,13 @@
 	<link type="text/css" href="estilos.css" rel="stylesheet" />
 </head>
 <body onload="init();">
-<h3>Gráfico - reta tangente</h3>
+<h3 align="center" style="color:#FF0000">Gráfico - reta tangente</h3>
+<table>
+<tr>
+<td>
 <canvas width="700" height="500" id="cvs"></canvas>
+</td>
+<td>
 <form>
   <div>
     Escala em     X:
@@ -46,7 +51,7 @@
   <br>
   <div>
     Função:
-            <input type="text" id="func" size="30" value="4*Math.log(x)" />
+            <input type="text" id="func" size="30" value="1*Math.round(x)" />
   </div>
   <br>
   <div>
@@ -59,5 +64,7 @@
   <br>
   <input type="button" value="Calcular" onclick="redesenha();" />
 </form>
+</td>
+</tr>
 </body>
 </html>
